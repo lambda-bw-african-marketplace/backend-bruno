@@ -12,6 +12,7 @@ Router.route('/login').post(AuthController.login)
 Router.route('/').get(WelcomeController.index)
 Router.route('/profile').get(auth(), UserController.index)
 Router.route('/user/:id/products').get(auth(), UserController.getUserProducts)
+
 Router.route('/products')
   .get(auth(), ProductController.index)
   .post(auth(), ProductController.create)
