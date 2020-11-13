@@ -19,7 +19,6 @@ class Auth {
 
       const [newUser] = await AuthModel.create(user)
       res.status(201).json({
-        message: 'New User Created',
         id: newUser,
         email,
         first_name,
