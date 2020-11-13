@@ -200,7 +200,7 @@ Base URL: https://africa-mkplace.herokuapp.com
 <br>
 <br>
 Private Route
-* AUTH = Endpoint will required a JWT Token in the HEADER
+* AUTH = Private endpoints will required a JWT Token in the HEADER.
 <br>
 <br>
 
