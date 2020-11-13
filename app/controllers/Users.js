@@ -10,6 +10,8 @@ class Users {
       const id = req.params.id
 
       const getProdructs = await userModel.getProducts(id)
+      if (getProdructs === undefined)
+        return res.status(404).json({error: 'user_id is not valid'})
       res.status(200).json(getProdructs)
     } catch (error) {
       console.log(error)

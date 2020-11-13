@@ -7,7 +7,7 @@ const authenticate = () => {
       const token = req.headers.authorization
       if (!token)
         return res.status(401).json({
-          error: 'Authorization Header is required',
+          error: 'Authorization Header Token is required',
         })
       jwt.verify(token, jwtKey, (err, decoded) => {
         if (err) return res.status(401).json(err)

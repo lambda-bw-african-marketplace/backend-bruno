@@ -9,46 +9,26 @@ exports.up = async function (knex) {
     table.timestamps(true, true)
   })
 
-  await knex.schema.createTable('locations', (table) => {
+  await knex.schema.createTable('products', (table) => {
     table.increments()
-    table.string('name').notNullable().unique()
-  }),
-    await knex.schema.createTable('products', (table) => {
-      table.increments()
-      table.string('name').notNullable()
-      table.float('price').notNullable()
-      table.string('category').notNullable()
-      table.string('description').notNullable()
-      table.string('unit')
-      table.string('imageUrl')
-      table
-        .integer('user_id')
-        .unsigned()
-        .references('id')
-        .inTable('users')
-        .onDelete('CASCADE')
-        .onUpdate('CASCADE')
-
-      table
-        .integer('location_id')
-        .unsigned()
-        .references('id')
-        .inTable('locations')
-    })
-
-  await knex.schema.createTable('product_locations', (table) => {
-    table.integer('user_id').unsigned().references('id').inTable('users')
+    table.string('name').notNullable()
+    table.float('price').notNullable()
+    table.string('city').notNullable()
+    table.string('category').notNullable()
+    table.string('description').notNullable()
+    table.string('unit')
+    table.string('image_url')
     table
-      .integer('location_id')
+      .integer('user_id')
       .unsigned()
       .references('id')
-      .inTable('locations')
+      .inTable('users')
+      .onDelete('CASCADE')
+      .onUpdate('CASCADE')
   })
 }
 
 exports.down = async function (knex) {
-  await knex.schema.dropTableIfExists('product_locations')
   await knex.schema.dropTableIfExists('products')
-  await knex.schema.dropTableIfExists('locations')
   await knex.schema.dropTableIfExists('users')
 }
