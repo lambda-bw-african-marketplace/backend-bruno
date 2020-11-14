@@ -5,7 +5,9 @@ const UserController = require('../app/controllers/Users')
 const WelcomeController = require('../app/controllers/Welcome')
 const AuthController = require('../app/controllers/Auth')
 const ProductController = require('../app/controllers/Products')
+const LocationController = require('../app/controllers/Locations')
 const auth = require('../config/authenticate')
+const role = require('../app/middlewares/role')
 
 Router.route('/register').post(AuthController.register)
 Router.route('/login').post(AuthController.login)
@@ -22,5 +24,9 @@ Router.route('/products')
 Router.route('/products/:id')
   .get(auth(), ProductController.show)
   .put(auth(), ProductController.update)
+  .delete(auth(), role(), ProductController.delete)
+
+Router.route('/locations').get(auth(), LocationController.index)
+Router.route('/locations/:city').get(auth(), LocationController.city)
 
 module.exports = Router

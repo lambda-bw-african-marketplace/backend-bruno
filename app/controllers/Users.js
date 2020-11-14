@@ -1,4 +1,5 @@
 const userModel = require('../models/UserModel')
+const priviliges = require('../middlewares/restric')
 
 class Users {
   async index(req, res) {
@@ -7,7 +8,8 @@ class Users {
   }
 
   async update(req, res) {
-    const id = req.params.id
+    const {id} = req.params
+
     const {email, isAdmin, first_name, last_name} = req.body
 
     const updatedUser = {
@@ -19,6 +21,12 @@ class Users {
     }
 
     try {
+      if (req.token.id != id) {
+        return res.status(401).json({
+          messse: 'You do not have sufficient privileges.',
+        })
+      }
+
       const [user] = await userModel.update(id, updatedUser)
       res.status(200).json(user)
     } catch (error) {

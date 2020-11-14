@@ -170,9 +170,9 @@ Project Link: [bw-african-marketplace](https://github.com/lambda-bw-african-mark
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/lambda-bw-african-marketplace/backend-bruno/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/devbrunopaula
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/bruno-paula/
 [product-screenshot]: screenshot.png
@@ -212,7 +212,7 @@ Private Routes
 | \*\* get products by ID   | GET  | /api/product/:id |
 | \*\* add product          | POST | api/products     |
 | \*\* update product       | PUT  | /api/product/:id |
-| \*\* delete professor     | DEL  | /api/product/:id |
+| \*\* delete product       | DEL  | /api/product/:id |
 
 <br>
 <br>
@@ -228,11 +228,15 @@ Private Routes
 <br>
 <br>
 
-# location
+# locations
 
-| DESCRIPTION       | TYPE | ENDPOINT       |
-| ----------------- | ---- | -------------- |
-| \*\* get location | GET  | /api/locations |
+\* Cities with two names **Use %20** for spaces EX: San Francisco = san%20francisco
+<br>
+
+| DESCRIPTION                    | TYPE | ENDPOINT            |
+| ------------------------------ | ---- | ------------------- |
+| \*\* get all locations         | GET  | /api/locations      |
+| \*\* get location by city name | GET  | /api/locations/city |
 
 <br>
 <br>
