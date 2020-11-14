@@ -11,11 +11,16 @@ Router.route('/register').post(AuthController.register)
 Router.route('/login').post(AuthController.login)
 Router.route('/').get(WelcomeController.index)
 Router.route('/profile').get(auth(), UserController.index)
+
+Router.route('/profile/:id').put(auth(), UserController.update)
 Router.route('/user/:id/products').get(auth(), UserController.getUserProducts)
 
 Router.route('/products')
   .get(auth(), ProductController.index)
   .post(auth(), ProductController.create)
-Router.route('/products/:id').get(auth(), ProductController.show)
+
+Router.route('/products/:id')
+  .get(auth(), ProductController.show)
+  .put(auth(), ProductController.update)
 
 module.exports = Router

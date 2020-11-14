@@ -5,10 +5,30 @@ class Users {
     const [user] = await userModel.index(req.token.email)
     res.status(200).json(user)
   }
-  async getUserProducts(req, res) {
-    try {
-      const id = req.params.id
 
+  async update(req, res) {
+    const id = req.params.id
+    const {email, isAdmin, first_name, last_name} = req.body
+
+    const updatedUser = {
+      email,
+      isAdmin,
+      first_name,
+      last_name,
+      updated_at: new Date(),
+    }
+
+    try {
+      const [user] = await userModel.update(id, updatedUser)
+      res.status(200).json(user)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async getUserProducts(req, res) {
+    const id = req.params.id
+    try {
       const getProdructs = await userModel.getProducts(id)
       if (getProdructs === undefined)
         return res.status(404).json({error: 'user_id is not valid'})

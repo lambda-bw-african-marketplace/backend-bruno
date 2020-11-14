@@ -199,39 +199,40 @@ Base URL: https://africa-mkplace.herokuapp.com
 
 <br>
 <br>
-Private Route
-* AUTH = Endpoint will required a JWT Token in the HEADER
+Private Routes
+**  Endpoint will required a JWT Token in the HEADER
 <br>
 <br>
 
 # Prodcuts CRUD
 
-| DESCRIPTION          | TYPE | ENDPOINT                |
-| -------------------- | ---- | ----------------------- |
-| get list of products | GET  | /api/products - AUTH    |
-| get products by ID   | GET  | /api/product/:id - AUTH |
-| add product          | POST | api/products - AUTH     |
-| update product       | PUT  | /api/product/:id - AUTH |
-| delete professor     | DEL  | /api/product/:id - AUTH |
+| DESCRIPTION               | TYPE | ENDPOINT         |
+| ------------------------- | ---- | ---------------- |
+| \*\* get list of products | GET  | /api/products    |
+| \*\* get products by ID   | GET  | /api/product/:id |
+| \*\* add product          | POST | api/products     |
+| \*\* update product       | PUT  | /api/product/:id |
+| \*\* delete professor     | DEL  | /api/product/:id |
 
 <br>
 <br>
 
-# Users Profiles
+# Users
 
-| DESCRIPTION     | TYPE | ENDPOINT      |
-| --------------- | ---- | ------------- |
-| user Profile    | GET  | /api/profile/ |
-| upadate Profile | PUT  | /api/profile/ |
+| DESCRIPTION                  | TYPE | ENDPOINT                |
+| ---------------------------- | ---- | ----------------------- |
+| \*\* get user profile        | GET  | /api/profile/           |
+| \*\* upadate user profile    | PUT  | /api/profile/:id        |
+| \*\* get users products list | GET  | /api/users/:id/products |
 
 <br>
 <br>
 
 # location
 
-| DESCRIPTION  | TYPE | ENDPOINT       |
-| ------------ | ---- | -------------- |
-| get location | GET  | /api/locations |
+| DESCRIPTION       | TYPE | ENDPOINT       |
+| ----------------- | ---- | -------------- |
+| \*\* get location | GET  | /api/locations |
 
 <br>
 <br>
