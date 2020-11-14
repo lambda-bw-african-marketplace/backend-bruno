@@ -44,6 +44,9 @@ class ProductModel {
         'image_url'
       )
   }
+  async remove(id) {
+    return db('products').where({id}).del()
+  }
 }
 
 module.exports = new ProductModel()

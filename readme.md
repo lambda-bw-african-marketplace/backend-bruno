@@ -53,9 +53,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://images1.novica.net/pictures/5/p379121_2a.jpg)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/lambda-bw-african-marketplace/backend-bruno/blob/main/african-marketplace-2-irene-jonker.jpg)
 
-Learn How a African Marketplace System Can Help Your Business Today..
+Learn How a CRM System Can Help Your Business Today..
 
 Here's why:
 
@@ -170,9 +170,9 @@ Project Link: [bw-african-marketplace](https://github.com/lambda-bw-african-mark
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/lambda-bw-african-marketplace/backend-bruno/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/devbrunopaula
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/bruno-paula/
 [product-screenshot]: screenshot.png
@@ -199,10 +199,8 @@ Base URL: https://africa-mkplace.herokuapp.com
 
 <br>
 <br>
-
 Private Routes
-**  Endpoints will required a JWT Token in the HEADER
-
+**  Endpoint will required a JWT Token in the HEADER
 <br>
 <br>
 
@@ -214,7 +212,7 @@ Private Routes
 | \*\* get products by ID   | GET  | /api/product/:id |
 | \*\* add product          | POST | api/products     |
 | \*\* update product       | PUT  | /api/product/:id |
-| \*\* delete professor     | DEL  | /api/product/:id |
+| \*\* delete prodcut       | DEL  | /api/product/:id |
 
 <br>
 <br>
@@ -230,11 +228,15 @@ Private Routes
 <br>
 <br>
 
-# location
+# locations
 
-| DESCRIPTION       | TYPE | ENDPOINT       |
-| ----------------- | ---- | -------------- |
-| \*\* get location | GET  | /api/locations |
+\* Cities with two names **Use %20** for spaces EX: San Francisco = san%20francisco
+<br>
+
+| DESCRIPTION                    | TYPE | ENDPOINT            |
+| ------------------------------ | ---- | ------------------- |
+| \*\* get all locations         | GET  | /api/locations      |
+| \*\* get location by city name | GET  | /api/locations/city |
 
 <br>
 <br>
