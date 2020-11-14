@@ -62,6 +62,29 @@ class Products {
       res.status(500).json({error: 'Opps something went wrong'})
     }
   }
+
+  async update(req, res) {
+    console.log(req.token)
+    const id = req.params.id
+    const {name, price, city, category, description, unit, image_url} = req.body
+
+    const updatedProduct = {
+      name,
+      price,
+      city,
+      category,
+      description,
+      unit,
+      image_url,
+    }
+
+    try {
+      const [product] = await ProductModel.update(id, updatedProduct)
+      res.status(200).json(product)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 module.exports = new Products()

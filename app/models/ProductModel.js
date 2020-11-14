@@ -25,6 +25,25 @@ class ProductModel {
   async save(payload) {
     return await db('products').insert(payload).returning('id')
   }
+
+  async update(id, payload) {
+    const [productId] = await db('products')
+      .update(payload)
+      .where('id', id)
+      .returning('id')
+    return await db('products')
+      .where('id', productId)
+      .select(
+        'id',
+        'name',
+        'price',
+        'category',
+        'description',
+        'unit',
+        'city',
+        'image_url'
+      )
+  }
 }
 
 module.exports = new ProductModel()

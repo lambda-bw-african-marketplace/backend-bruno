@@ -37,20 +37,24 @@ class UserModel {
         'last_name'
       )
   }
+
+  async update(id, payload) {
+    const [userId] = await db('users')
+      .update(payload)
+      .where('id', id)
+      .returning('id')
+    return await db('users')
+      .where('id', userId)
+      .select(
+        'id',
+        'email',
+        'isAdmin',
+        'first_name',
+        'last_name',
+        'created_at',
+        'updated_at'
+      )
+  }
 }
 
 module.exports = new UserModel()
-
-// "id": 2,
-//     "name": "Rice",
-//     "price": 3.99,
-//     "category": "Grains",
-//     "description": "raw jasmine rice",
-//     "unit": "lbs",
-//     "imageUrl": null,
-//     "user_id": 2,
-//     "email": "brunopaula@dryserv.com",
-//     "password": "$2a$13$Sgb4yelCXGyCAN8FX1NfS.5aptQY19sASxFNV80C2Dwy2pzsIuPgG",
-//     "isAdmin": false,
-//     "first_name": "Bruno",
-//     "last_name": "paula",
