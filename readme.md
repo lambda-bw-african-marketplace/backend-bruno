@@ -212,7 +212,7 @@ Private Routes
 | \*\* get products by ID   | GET  | /api/product/:id |
 | \*\* add product          | POST | api/products     |
 | \*\* update product       | PUT  | /api/product/:id |
-| \*\* delete product       | DEL  | /api/product/:id |
+| \*\* delete prodcut       | DEL  | /api/product/:id |
 
 <br>
 <br>
