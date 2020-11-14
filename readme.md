@@ -53,9 +53,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/lambda-bw-african-marketplace/backend-bruno/blob/main/african-marketplace-2-irene-jonker.jpg)
+[![Product Name Screen Shot][product-screenshot]](https://images1.novica.net/pictures/5/p379121_2a.jpg)
 
-Learn How a CRM System Can Help Your Business Today..
+Learn How a African Marketplace System Can Help Your Business Today..
 
 Here's why:
 
@@ -199,8 +199,10 @@ Base URL: https://africa-mkplace.herokuapp.com
 
 <br>
 <br>
+
 Private Routes
-**  Endpoint will required a JWT Token in the HEADER
+**  Endpoints will required a JWT Token in the HEADER
+
 <br>
 <br>
 
