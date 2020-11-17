@@ -28,36 +28,4 @@ module.exports = {
       directory: './database/seeds',
     },
   },
-  test: {
-    client: 'sqlite3',
-    connection: {
-      filename: './database/testing.db3',
-    },
-    migrations: {
-      tableName: 'knex_migrations',
-    },
-    seeds: {
-      directory: './database/seeds',
-    },
-    useNullAsDefault: true,
-    pool: {
-      afterCreate: (conn, done) => {
-        conn.run('PRAGMA foreign_keys = ON', done)
-      },
-    },
-  },
-}
-
-module.exports = {
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-
-  migrations: {
-    directory: './database/migrations',
-    tableName: 'knex_migrations',
-  },
-
-  seeds: {
-    directory: './database/seeds',
-  },
 }
