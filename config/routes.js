@@ -6,6 +6,7 @@ const WelcomeController = require('../app/controllers/Welcome')
 const AuthController = require('../app/controllers/Auth')
 const ProductController = require('../app/controllers/Products')
 const LocationController = require('../app/controllers/Locations')
+
 const auth = require('../config/authenticate')
 const role = require('../app/middlewares/role')
 
