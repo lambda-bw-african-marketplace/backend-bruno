@@ -1,6 +1,6 @@
 class Welcome {
   async index(req, res) {
-    res.send('working')
+    res.json({message: 'working'})
   }
 }
 
