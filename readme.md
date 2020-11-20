@@ -191,11 +191,11 @@ Base URL: https://africa-mkplace.herokuapp.com
 
 | DESCRIPTION            | TYPE | ENDPOINT           |
 | ---------------------- | ---- | ------------------ |
-| Register User or Owner | POST | /api/auth/register |
+| Register User or Owner | POST | /api/register |
 
 | DESCRIPTION | TYPE | ENDPOINT        |
 | ----------- | ---- | --------------- |
-| Login Users | POST | /api/auth/login |
+| Login Users | POST | /api/login |
 
 <br>
 <br>
